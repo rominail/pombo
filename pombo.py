@@ -442,7 +442,7 @@ class Pombo(object):
 
         if not self.configuration["only_on_ip_change"]:
             self.log.info("Skipping check based on IP change.")
-            return False, False
+            return True, False
 
         return self.ip_changed(current_ip), False
 
